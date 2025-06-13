@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>画像生成AI 議事録</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  画像生成AI 議事録
+</header>
+
+<div class="container">
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="article1.html" target="contentFrame" class="active">制作初期テスト</a></li>
+      <li><a href="article2.html" target="contentFrame">制作フロー詳細</a></li>
+      <li><a href="article3.html" target="contentFrame">Midjourney検証</a></li>
+      <li><a href="article4.html" target="contentFrame">DALL・E検証</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <iframe name="contentFrame" src="article1.html"></iframe>
+  </main>
+
+</div>
+
+<script>
+  // メニューのクリックでactive切り替え
+  const links = document.querySelectorAll('.sidebar ul li a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      links.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
